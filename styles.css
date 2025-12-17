@@ -38,23 +38,23 @@ header p{opacity:0.95;color:rgba(255,255,255,0.95)}
 
 /* Header layout with logo */
 .header-inner{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.6rem;max-width:1100px;margin:0 auto}
-.site-logo{width:320px;height:160px;object-fit:cover;}
+.site-logo{width:100%;max-width:220px;height:auto;object-fit:contain;display:block}
 .header-text{text-align:center}
 .header-text h1{margin:0;font-size:1.6rem}
 .header-text p{margin:0;color:rgba(255,255,255,0.95);opacity:0.95}
 
 @media (max-width:880px){
-    .site-logo{width:120px;height:120px}
+    .site-logo{max-width:120px;height:auto;width:auto}
     .header-text h1{font-size:1.4rem}
-}
+} 
 
 @media (max-width:480px){
-    .site-logo{width:88px;height:88px}
+    .site-logo{max-width:88px;height:auto;width:auto}
     .header-text h1{font-size:1.05rem}
 }
 
 /* Nav */
-nav{background:transparent;padding:0.75rem 1rem;margin-top:-1.25rem}
+nav{background:transparent;padding:0.75rem 1rem;margin-top:-1.25rem;position:relative;z-index:10000}
 nav ul{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;list-style:none}
 nav a{
     color:var(--text);
@@ -117,9 +117,9 @@ section h2::after{content:"";display:inline-block;width:8px;height:8px;margin-le
 
 /* ===== Mobile specific styles ===== */
 /* Navigation */
-.nav-toggle{display:none;position:absolute;left:1rem;top:0.8rem;width:44px;height:40px;border-radius:10px;background:transparent;border:none;cursor:pointer}
-.nav-toggle .hamburger{display:block;width:22px;height:2px;background:var(--text);position:relative}
-.nav-toggle .hamburger::before,.nav-toggle .hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:var(--text);transition:transform .25s ease, opacity .2s ease}
+.nav-toggle{display:none;position:absolute;left:1rem;top:0.8rem;width:44px;height:40px;border-radius:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;cursor:pointer;box-shadow:none;z-index:9999;outline:none}
+.nav-toggle .hamburger{display:block;width:22px;height:2px;background:#fff;position:relative}
+.nav-toggle .hamburger::before,.nav-toggle .hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:#fff;transition:transform .25s ease, opacity .2s ease}
 .nav-toggle .hamburger::before{top:-7px}
 .nav-toggle .hamburger::after{top:7px}
 .nav-toggle.is-open .hamburger{background:transparent}
@@ -129,8 +129,17 @@ section h2::after{content:"";display:inline-block;width:8px;height:8px;margin-le
 .nav-list{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
 @media (max-width:880px){
-    .nav-toggle{display:block}
-    .nav-list{position:absolute;left:8px;right:8px;top:62px;margin:0;background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.00));flex-direction:column;align-items:stretch;padding:0.6rem;border-radius:10px;max-height:0;overflow:hidden;transition:max-height .28s ease, opacity .28s ease;opacity:0}
+    .nav-toggle{display:flex;position:absolute;left:1rem;top:0.8rem;width:44px;height:44px;border-radius:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;cursor:pointer;align-items:center;justify-content:center;box-shadow:none;z-index:10001}
+    .nav-toggle:focus{outline:2px solid rgba(255,255,255,0.12);outline-offset:2px}
+    .nav-toggle .hamburger{display:block;width:22px;height:2px;background:#fff;position:relative}
+    .nav-toggle .hamburger::before,.nav-toggle .hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:#fff;transition:transform .25s ease, opacity .2s ease}
+    .nav-toggle .hamburger::before{top:-7px}
+    .nav-toggle .hamburger::after{top:7px}
+    .nav-toggle.is-open .hamburger{background:transparent}
+    .nav-toggle.is-open .hamburger::before{transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.is-open .hamburger::after{transform:translateY(-7px) rotate(-45deg)}
+
+    .nav-list{position:absolute;left:8px;right:8px;top:62px;margin:0;background:var(--bg);flex-direction:column;align-items:stretch;padding:0.6rem;border-radius:10px;max-height:0;overflow:hidden;transition:max-height .28s ease, opacity .28s ease;opacity:0;z-index:10000;pointer-events:auto} 
     nav.open .nav-list{max-height:480px;opacity:1;padding:0.6rem 0.8rem}
     .nav-list li{padding:0.35rem 0.6rem}
 }
