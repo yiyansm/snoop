@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentación del Proyecto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.PNG" type="image/png">
+    <link rel="apple-touch-icon" href="logo.PNG">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <img class="site-logo" src="logo.PNG" alt="Snoop logo">
+            <div class="header-text sr-only">
+                <h1>Manual de Snoop</h1>
+                <p>Documentación técnica</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-list">
+            <li><a href="#Integrantes">Integrantes</a></li>
+            <li><a href="#Descripcion general">Descripcion</a></li>
+            <li><a href="#tecnologias">Pruebas</a></li>
+            <li><a href="#instalacion">Metodologia</a></li>
+            <li><a href="#tablas">Tablas</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#uso">Uso</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="Integrantes">
+            <h2>Integrantes</h2>
+            <p>Lian Arey Michelle Sanchez Melchor</p>
+            <p>Sofia Xochitl Zarate Garcia</p>
+            <p>Wendy Kamila Garcia Flores</p>
+            <p>Jessica Anely Gonzalez Perez</p>
+            <h2>Maestra</h2>
+            <p>Beatriz Abreu Pineda</p>
+            <h2>Grado    Grupo</h2>
+            <p>5°          M</p>
+            <h2>Nombre del proyecto</h2>
+            <p>SNOOP</p>
+        </section>
+
+        <section id="Descripcion general">
+            <h2>Descripcion general</h2>
+            <p>El proyecto consiste en el desarrollo de una plataforma web inspirada en el modelo de Pinterest, orientada a la visualización, organización y descubrimiento de contenido visual. La página permitirá a los usuarios explorar imágenes y publicaciones, compartir ideas de forma sencilla e intuitiva.</p>
+
+La plataforma estará diseñada con una interfaz atractiva y responsiva, priorizando la experiencia de usuario y la navegación fluida. Además, incorporará funcionalidades como registro e inicio de sesión, interacción con publicaciones (dar “me gusta”) y un sistema de búsqueda que facilite el descubrimiento de contenido relevante.</p>
+            <h2>Objetivos</h2>
+            <p>Desarrollar una aplicación web interactiva que permita a los usuarios descubrir contenido visual de manera eficiente, fomentando la creatividad y el intercambio de ideas y momentos.
+
+<p>Diseñar una interfaz visual atractiva, intuitiva y adaptable a distintos dispositivos.</p>
+
+<p>Implementar un sistema de gestión de usuarios con registro y autenticación.</p>
+
+<p>Fomentar la interacción entre usuarios mediante acciones como reaccionar a los post de tu preferencia.</p>
+
+<p>Garantizar un rendimiento óptimo y una experiencia de navegación fluida.</p>
+        </section>
+
+        <section id="tecnologias">
+            <h2>Tecnologías</h2>
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>Tecnología</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Estructura y contenido del sitio</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>Estilos y diseño responsivo</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Interactividad en el frontend</td>
+                    </tr>
+                    <tr>
+                        <td>Git / VSCode</td>
+                        <td>Control de versiones y edición</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Pruebas</h2>
+            <div class="tests">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Funcionalidad probada</th>
+                            <th>Tipo de prueba</th>
+                            <th>Descripción</th>
+                            <th>Resultado esperado</th>
+                            <th>Resultado real</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>T01</td>
+                            <td>Registro de usuario</td>
+                            <td>Funcionalidad</td>
+                            <td>Ingresar datos válidos en formulario de registro</td>
+                            <td>El usuario debe crearse exitosamente</td>
+                            <td>Usuario creado</td>
+                            <td>✅ Pasó</td>
+                        </tr>
+                        <tr>
+                            <td>T02</td>
+                            <td>Inicio de sesión</td>
+                            <td>Seguridad / Funcional</td>
+                            <td>Iniciar sesión con contraseña incorrecta</td>
+                            <td>Mostrar mensaje de error y no acceder</td>
+                            <td>Muestra error</td>
+                            <td>✅ Pasó</td>
+                        </tr>
+                        <tr>
+                            <td>T03</td>
+                            <td>Inicio de sesión</td>
+                            <td>Funcionalidad</td>
+                            <td>Iniciar sesión con datos correctos</td>
+                            <td>Redirigir a la pantalla principal</td>
+                            <td>Acceso correcto</td>
+                            <td>✅ Pasó</td>
+                        </tr>
+                        <tr>
+                            <td>T04</td>
+                            <td>Subir historia</td>
+                            <td>Funcionalidad</td>
+                            <td>Seleccionar imagen y subir con descripción</td>
+                            <td>La historia debe aparecer en el feed</td>
+                            <td>Historia publicada</td>
+                            <td>✅ Pasó</td>
+                        </tr>
+                        <tr>
+                            <td>T05</td>
+                            <td>Botón “Like”</td>
+                            <td>Funcionalidad / UI</td>
+                            <td>Presionar botón "like" en una historia</td>
+                            <td>El contador de likes debe aumentar</td>
+                            <td>Aumenta correctamente</td>
+                            <td>✅ Pasó</td>
+                        </tr>
+                        <tr>
+                            <td>T06</td>
+                            <td>Ver feed de historias</td>
+                            <td>Rendimiento</td>
+                            <td>Cargar más de 20 historias en el feed</td>
+                            <td>Las historias deben cargarse sin errores ni lentitud</td>
+                            <td>Carga normal</td>
+                            <td>✅ Pasó</td>
+                        </tr>
+                        <tr>
+                            <td>T07</td>
+                            <td>Protección de cuenta</td>
+                            <td>Seguridad</td>
+                            <td>Intentar acceder a otra cuenta sin permiso</td>
+                            <td>Mostrar error o denegar acceso</td>
+                            <td>Acceso denegado</td>
+                            <td>✅ Pasó</td>
+                        </tr>
+                        <tr>
+                            <td>T08</td>
+                            <td>Sesión expirada</td>
+                            <td>Seguridad / UX</td>
+                            <td>Esperar inactividad de 30 min</td>
+                            <td>La app debe cerrar sesión automáticamente</td>
+                            <td>Cierra sesión</td>
+                            <td>✅ Pasó</td>
+                        </tr>
+                        <tr>
+                            <td>T09</td>
+                            <td>Campos vacíos en registro</td>
+                            <td>Funcionalidad / Valid.</td>
+                            <td>Dejar campos vacíos y enviar formulario</td>
+                            <td>Mostrar advertencia de campos requeridos</td>
+                            <td>Muestra advertencia</td>
+                            <td>✅ Pasó</td>
+                        </tr>
+                        <tr>
+                            <td>T10</td>
+                            <td>Prueba de humo</td>
+                            <td>Smoke Test</td>
+                            <td>Probar carga general del sitio y navegación básica</td>
+                            <td>Todo debe cargar y funcionar sin errores críticos</td>
+                            <td>Todo funciona bien</td>
+                            <td>✅ Pasó</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="instalacion">
+            <h2>Metodología</h2>
+            <p>SCRUM</p>
+
+            <h3>Roles</h3>
+            <ul>
+                <li><strong>Scrum Máster:</strong> Jessica Anely Gonzalez Pérez</li>
+                <li><strong>Product Owner:</strong> Lian Arey Michelle Sanchez Melchor</li>
+                <li><strong>Diseñadora:</strong> Wendy Kamila García Flores</li>
+                <li><strong>Desarrolladora web:</strong> Sofía Xóchitl Zárate García</li>
+            </ul>
+
+            <h3>Tarjeta de actividades</h3>
+            <ul>
+                <li><strong>Jessica Anely Gonzalez Pérez:</strong> Responsable de pruebas; coordina con el Product Owner. Tiempo estimado: 1 día.</li>
+                <li><strong>Wendy Kamila García Flores:</strong> Diseñadora del sitio web. Tiempo estimado: 3 meses.</li>
+                <li><strong>Lian Arey Michelle Sanchez Melchor:</strong> Mapa del sitio. Tiempo estimado: 3 meses.</li>
+                <li><strong>Sofía Xóchilt Zárate García:</strong> Desarrolladora web; encargada de codificar el sitio y adaptarlo a las necesidades del cliente.</li>
+            </ul>
+        </section>
+
+        <section id="tablas">
+            <h2>Tablas de mantenimiento</h2>
+                <h2>Tipos de mantenimiento del sitio web</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de mantenimiento</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mantenimiento correctivo</td>
+                <td>Corrección de errores, fallos del sistema y problemas detectados en funcionalidades como likes, posts o perfiles.</td>
+            </tr>
+            <tr>
+                <td>Mantenimiento preventivo</td>
+                <td>Acciones para evitar fallos futuros: actualizaciones, backups y optimización del sistema.</td>
+            </tr>
+            <tr>
+                <td>Mantenimiento evolutivo</td>
+                <td>Mejora y ajuste de funcionalidades existentes según el uso de los usuarios.</td>
+            </tr>
+            <tr>
+                <td>Mantenimiento de seguridad</td>
+                <td>Protección del sitio frente a accesos no autorizados, pérdida de datos y vulnerabilidades.</td>
+            </tr>
+            <tr>
+                <td>Mantenimiento de rendimiento</td>
+                <td>Optimización de tiempos de carga, imágenes y base de datos.</td>
+            </tr>
+            <tr>
+                <td>Mantenimiento de experiencia de usuario</td>
+                <td>Mejora de usabilidad, navegación y estabilidad general del sitio.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Mes 1 – Estabilización inicial</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tarea</th>
+                <th>Tipo</th>
+                <th>Frecuencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Revisión general del sistema</td>
+                <td>Preventivo</td>
+                <td>Única</td>
+            </tr>
+            <tr>
+                <td>Configuración de copias de seguridad automáticas</td>
+                <td>Seguridad</td>
+                <td>Diario</td>
+            </tr>
+            <tr>
+                <td>Revisión de registro, login y perfiles</td>
+                <td>Correctivo</td>
+                <td>Semanal</td>
+            </tr>
+            <tr>
+                <td>Verificación de creación y guardado de posts</td>
+                <td>Correctivo</td>
+                <td>Semanal</td>
+            </tr>
+            <tr>
+                <td>Revisión de rendimiento inicial</td>
+                <td>Rendimiento</td>
+                <td>Semanal</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Mes 2 – Seguridad y optimización básica</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tarea</th>
+                <th>Tipo</th>
+                <th>Frecuencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Actualización de librerías y dependencias</td>
+                <td>Preventivo</td>
+                <td>Mensual</td>
+            </tr>
+            <tr>
+                <td>Escaneo de vulnerabilidades</td>
+                <td>Seguridad</td>
+                <td>Mensual</td>
+            </tr>
+            <tr>
+                <td>Optimización básica de base de datos</td>
+                <td>Rendimiento</td>
+                <td>Mensual</td>
+            </tr>
+            <tr>
+                <td>Revisión del sistema de likes</td>
+                <td>Correctivo</td>
+                <td>Semanal</td>
+            </tr>
+            <tr>
+                <td>Moderación de contenido</td>
+                <td>Preventivo</td>
+                <td>Diario</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Mes 3 – Rendimiento y experiencia de usuario</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tarea</th>
+                <th>Tipo</th>
+                <th>Frecuencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Optimización de imágenes</td>
+                <td>Rendimiento</td>
+                <td>Mensual</td>
+            </tr>
+            <tr>
+                <td>Ajuste de caché del sitio</td>
+                <td>Rendimiento</td>
+                <td>Mensual</td>
+            </tr>
+            <tr>
+                <td>Pruebas de usabilidad</td>
+                <td>UX</td>
+                <td>Mensual</td>
+            </tr>
+            <tr>
+                <td>Revisión de perfiles y eliminación de cuentas</td>
+                <td>Correctivo</td>
+                <td>Mensual</td>
+            </tr>
+            <tr>
+                <td>Análisis de comportamiento de usuarios</td>
+                <td>Evolutivo</td>
+                <td>Mensual</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Mes 4 – Mantenimiento evolutivo</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tarea</th>
+                <th>Tipo</th>
+                <th>Frecuencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ajustes en creación y visualización de posts</td>
+                <td>Evolutivo</td>
+                <td>Mensual</td>
+            </tr>
+            <tr>
+                <td>Mejora de notificaciones (likes, guardados)</td>
+                <td>Evolutivo</td>
+                <td>Mensual</td>
+            </tr>
+            <tr>
+                <td>Revisión de compatibilidad móvil y navegadores</td>
+                <td>Preventivo</td>
+                <td>Trimestral</td>
+            </tr>
+            <tr>
+                <td>Revisión de logs del sistema</td>
+                <td>Preventivo</td>
+                <td>Semanal</td>
+            </tr>
+            <tr>
+                <td>Backups y seguridad continua</td>
+                <td>Seguridad</td>
+                <td>Diario</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+        </section>
+
+        <section id="video">
+            <h2>Video del Proyecto</h2>
+            <div class="video-container">
+                <video controls playsinline poster="sn.png">
+                    <source src="vid.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+		
+        <section id="uso">
+            <h2>Codigos de SNOOP</h2>
+            <p>Explora el código del proyecto desde aquí. Selecciona un archivo a la izquierda para ver su contenido y visualiza.</p>
+
+            <!-- Mini-IDE embebido -->
+            <div id="mini-ide-embedded" class="mini-ide-embedded">
+              <div class="mini-ide-window">
+                <div class="mini-ide-header">
+                  <strong>Mini Editor - <code>pinterest-clone</code></strong>
+                  <div class="mini-ide-actions">
+                    <button id="mini-ide-tree-toggle" class="btn mobile-only" aria-controls="mini-ide-file-list" aria-expanded="false">Archivos</button>
+                    <input id="mini-ide-search" placeholder="Buscar archivo..." aria-label="Buscar archivo" />
+                    <button id="mini-ide-download" class="btn" disabled>Descargar</button>
+                  </div>
+                </div>
+                <div class="mini-ide-body">
+                  <aside class="mini-ide-tree">
+                    <ul id="mini-ide-file-list" role="tree"></ul>
+                  </aside>
+                  <main class="mini-ide-editor">
+                    <div class="mini-ide-meta muted">Archivo: <span id="mini-ide-current">Ninguno</span></div>
+                    <pre id="mini-ide-code" class="code-block" tabindex="0">Selecciona un archivo para ver su contenido...</pre>
+                  </main>
+                </div>
+              </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

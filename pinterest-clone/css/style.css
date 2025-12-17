@@ -1,0 +1,166 @@
+/* styles.css - diseño simple tipo Pinterest */
+* { box-sizing: border-box; }
+body { font-family: IMPACT, Helvetica, monaco; margin:0; background-image:linear-gradient(#ff96bb, white); color: #524e4f; }
+.wrap { max-width:1100px; margin:0 auto; padding:1rem; }
+.topbar { background:#ff96bb; border-bottom:1px solid #eee; }
+.topbar .wrap { display:flex; align-items:center; justify-content:space-between; }
+.topbar h1 { margin:0; font-size:2rem; }
+.topbar a { text-decoration:none; color:#fcfafa; margin-left:1rem; }
+.grid { column-count:4; column-gap:1rem; padding:1rem 0; }
+.card { background:#fff; margin:0 0 1rem; display:inline-block; width:90%; border-radius:8px; overflow:hidden; break-inside:avoid; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+.card img { width:100%; display:block; }
+.card-body { padding:0.6rem; }
+.card h3 { margin:0 0 0.2rem; font-size:1rem; }
+.card .meta { color:#888; font-size:0.8rem; margin-bottom:0.4rem; }
+.actions { display:flex; align-items:center; gap:0.5rem; }
+.like-btn { border:0; background:transparent; font-size:1rem; cursor:pointer; }
+.like-btn[data-liked='1'] { color:crimson; }
+.likes-count { font-weight:bold; }
+.auth { display:flex; align-items:center; justify-content:center; height:100vh; }
+.auth-box { text-align: center; background:#fff; padding:2rem; border-radius:8px; box-shadow:0 3px 12px rgba(0,0,0,0.08); width:400px; height:340px; }
+.auth-box input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 0.7rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.auth-box input:focus {
+  border-color: #c73b6f;
+  box-shadow: 0 0 4px rgba(199, 59, 111, 0.4);
+}
+.auth-box button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 25px; /* redondeado */
+  background: #c73b6f; /* color bonito */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-family: inherit; /* usa la misma fuente */
+}
+
+.auth-box button:hover {
+  background: #a42f5a; /* un poco más oscuro */
+  transform: translateY(-2px); /* efecto sutil */
+}
+.errors { background:#ffecec; padding:0.6rem; color:#900; border-radius:4px; margin-bottom:0.6rem; }
+/* Contenedor del título con el icono */
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+}
+
+.title-row h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Ícono rosa */
+.delete-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;      /* tamaño del icono */
+  line-height: 1;
+  padding: 0;
+  color: #ff6fb5;       /* rosa pastel */
+  transition: 0.2s ease;
+}
+
+/* Hover: cambia a un rosa más fuerte */
+.delete-icon:hover {
+  color: #ff2d75;       /* rosa fuerte */
+  transform: scale(1.2);
+}
+.alerta {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffe4f1;
+    border-left: 5px solid #ff4f9a;
+    padding: 15px 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #b3004b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    animation: aparecer 0.25s ease-out;
+    z-index: 2000;
+}
+.foto-perfil {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.foto-perfil img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff6fb5;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+.perfil-contenedor {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.foto-perfil img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+    border: 3px solid #524e4f;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* Botón principal */
+.btn-mostrar-input {
+    background: #ff73b3;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #ffc1d5;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+.btn-mostrar-input:hover {
+    background: #ff559d;
+}
+
+/* Botón de subir foto */
+.btn-subir {
+    background: #ff9fce;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+    transition: 0.2s;
+}
+.btn-subir:hover {
+    background: #ff7dbd;
+}
+
+/* Centrar input archivo */
+#form-foto input[type="file"] {
+    margin: 10px auto;
+    display: block;
+}

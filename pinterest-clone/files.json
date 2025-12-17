@@ -1,0 +1,21 @@
+[
+  "config.php",
+  "db.sql",
+  "eliminar_post.php",
+  "helpers.php",
+  "index.php",
+  "info.php",
+  "like.php",
+  "login.php",
+  "logout.php",
+  "profile.php",
+  "README.md",
+  "register.php",
+  "subir_foto.php",
+  "upload.php",
+  "welcome.php",
+  "css/style.css",
+  "css/welcome.css",
+  "js/app.js",
+  "uploads/upload.php"
+]
